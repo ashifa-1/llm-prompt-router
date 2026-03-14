@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  prompt-router:
+    build: .
+    env_file:
+      - .env
