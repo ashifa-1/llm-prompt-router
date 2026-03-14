@@ -70,21 +70,10 @@ llm-prompt-router/
 
 The system defines specialized prompts for different tasks:
 
-### Code Expert
-
-Provides production-quality code and debugging assistance.
-
-### Data Analyst
-
-Interprets datasets using statistical reasoning and suggests visualizations.
-
-### Writing Coach
-
-Analyzes writing clarity, tone, and structure without rewriting the text.
-
-### Career Advisor
-
-Provides practical career advice and asks clarifying questions before giving recommendations.
+- Code Expert-- Provides production-quality code and debugging assistance.
+- Data Analyst-- Interprets datasets using statistical reasoning and suggests visualizations.
+- Writing Coach-- Analyzes writing clarity, tone, and structure without rewriting the text.
+- Career Advisor-- Provides practical career advice and asks clarifying questions before giving recommendations.
 
 ---
 
@@ -187,32 +176,6 @@ Testing results are recorded in:
 ```
 route_log.jsonl
 ```
-
----
-
-## Error Handling
-
-The classifier gracefully handles malformed LLM responses.
-
-If JSON parsing fails, the system defaults to:
-
-```
-{
- "intent": "unclear",
- "confidence": 0.0
-}
-```
-
-This prevents system crashes.
-
----
-
-## Technologies Used
-
-* Python
-* Groq API (LLM inference)
-* Docker
-* JSON Lines logging
 
 ---
 
