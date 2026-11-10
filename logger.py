@@ -10,5 +10,5 @@ def log_route(intent, confidence, user_message, final_response):
         "final_response": final_response
     }
 
-    with open("route_log.jsonl", "a") as file:
-        file.write(json.dumps(log_entry) + "\n")
+    with open("route_log.jsonl", "a", encoding="utf-8") as file:
+        file.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
